@@ -29,14 +29,6 @@ DeliverIF est une application de gestion de livraisons conçue pour optimiser le
 - **Entrepôt**: Lieu central à partir duquel les coursiers commencent et terminent leurs tournées de livraison.
 - **Fichier XML**: Fichiers utilisés pour charger les cartes de la ville, les demandes de livraison et les tournées précédemment sauvegardées.
 
-## Modèle du domaine
-
-![Modèle du domaine](path/to/domain-model.png)
-
-## Diagramme de cas d'utilisation
-
-![Diagramme de cas d'utilisation](path/to/use-case-diagram.png)
-
 ## Descriptions structurées des principaux cas d'utilisation
 
 ### 1. Charger une carte de la ville
