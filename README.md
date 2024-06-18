@@ -4,20 +4,6 @@
 
 DeliverIF est une application de gestion de livraisons conçue pour optimiser les tournées de livraison dans une ville. L'application permet de charger des cartes de ville, des demandes de livraison, de créer et assigner des demandes de livraison à des tournées, de déterminer des tournées optimisées et de générer des feuilles de route pour les coursiers.
 
-## Table des matières
-
-1. [Glossaire](#glossaire)
-2. [Modèle du domaine](#modèle-du-domaine)
-3. [Diagramme de cas d'utilisation](#diagramme-de-cas-dutilisation)
-4. [Descriptions structurées des principaux cas d'utilisation](#descriptions-structurées-des-principaux-cas-dutilisation)
-5. [Diagramme d'états-transitions](#diagramme-détats-transitions)
-6. [Architecture MVC et motifs de conception](#architecture-mvc-et-motifs-de-conception)
-7. [Diagrammes de classes et de packages](#diagrammes-de-classes-et-de-packages)
-8. [Rapport de test](#rapport-de-test)
-9. [Revue technique](#revue-technique)
-10. [Problèmes environnementaux et sociaux](#problèmes-environnementaux-et-sociaux)
-11. [Revue personnelle et commentaires](#revue-personnelle-et-commentaires)
-
 ## Glossaire
 
 ### Termes Clés
