@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"algo"},{"l":"All Packages","u":"allpackages-index.html"},{"l":"controller"},{"l":"model"},{"l":"parser"},{"l":"view"}];updateSearchResults();
