@@ -74,11 +74,7 @@ DeliverIF est une application de gestion de livraisons conçue pour optimiser le
 4. Le planificateur de livraisons spécifie si c'est un entrepôt ou non.
 5. Le planificateur de livraisons clique sur le bouton “Valider la demande de livraison créée”.
 6. Le système ajoute la demande de livraison créée aux demandes de livraison disponibles.
-
-## Diagramme d'états-transitions
-
-![Diagramme d'états-transitions](path/to/state-transition-diagram.png)
-
+   
 ## Architecture MVC et motifs de conception
 
 ### MVC
@@ -94,10 +90,6 @@ L'approche Model-View-Controller (MVC) a été choisie pour garantir la maintena
 - **Command**: Encapsule une requête en tant qu'objet, permettant aux utilisateurs de paramétrer les clients avec différentes requêtes, de mettre en file d'attente les requêtes, et de supporter les opérations annulables.
 - **State**: Permet de changer le contexte de l'application, naviguant entre différents modes autorisés.
 - **Observer**: Utilisé pour l'IHM avec une souris et pour montrer les composants sélectionnés, améliorant les performances lorsqu'il y a beaucoup d'objets.
-
-## Diagrammes de classes et de packages
-
-![Diagrammes de classes et de packages](path/to/class-and-package-diagrams.png)
 
 ## Rapport de test
 
