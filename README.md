@@ -2,111 +2,111 @@
 
 ## Introduction
 
-DeliverIF est une application de gestion de livraisons conçue pour optimiser les tournées de livraison dans une ville. L'application permet de charger des cartes de ville, des demandes de livraison, de créer et assigner des demandes de livraison à des tournées, de déterminer des tournées optimisées et de générer des feuilles de route pour les coursiers.
+DeliverIF is a delivery management application designed to optimize delivery routes within a city. It allows the loading of city maps, delivery requests, creation and assignment of delivery requests to routes, optimization of routes, and generation of delivery itineraries for couriers.
 
-## Glossaire
+## Glossary
 
-### Termes Clés
+### Key Terms
 
-- **Carte de la ville**: Une vue d'ensemble détaillée de la disposition géographique d'une ville sous forme de plan 2D.
-- **Coursier**: Individus responsables du transport et de la livraison de colis dans une ville à vélo.
-- **Tour**: Itinéraire optimisé suivi par un coursier pour compléter une série de livraisons.
-- **Fenêtre temporelle**: Intervalle de temps d'une heure pendant lequel une livraison spécifique doit avoir lieu.
-- **Entrepôt**: Lieu central à partir duquel les coursiers commencent et terminent leurs tournées de livraison.
-- **Fichier XML**: Fichiers utilisés pour charger les cartes de la ville, les demandes de livraison et les tournées précédemment sauvegardées.
+- **City Map**: A detailed 2D representation of a city's geographical layout.
+- **Courier**: Individuals responsible for transporting and delivering parcels by bike within the city.
+- **Route**: An optimized path followed by a courier to complete a series of deliveries.
+- **Time Window**: A one-hour time slot during which a specific delivery must be made.
+- **Warehouse**: The central location where couriers begin and end their delivery routes.
+- **XML File**: Files used to load city maps, delivery requests, and previously saved routes.
 
-## Descriptions structurées des principaux cas d'utilisation
+## Structured Descriptions of Key Use Cases
 
-### 1. Charger une carte de la ville
+### 1. Load a City Map
 
-**Description**: Charger dans l'application un fichier XML de carte de la ville choisi par le planificateur de livraisons.
+**Description**: Load a selected city map XML file into the application for the delivery planner.
 
-**Acteurs**: Planificateur de livraisons, Système de fichiers
+**Actors**: Delivery Planner, File System
 
-**Préconditions**: L'application est lancée avec succès et prête à recevoir les entrées du planificateur de livraisons.
+**Preconditions**: The application is successfully launched and ready to receive input from the delivery planner.
 
-**Postconditions**: La carte de la ville est chargée dans l'application, fournissant les données géographiques nécessaires à la planification des tournées des coursiers.
+**Postconditions**: The city map is loaded into the application, providing necessary geographical data for route planning.
 
-**Scénario principal**:
-1. Le planificateur de livraisons clique sur le bouton “Charger une carte de la ville”.
-2. Le système ouvre une boîte de dialogue de fichiers.
-3. Le planificateur de livraisons sélectionne un fichier XML de carte de la ville.
-4. Le système charge le fichier XML choisi.
-5. Le système dessine la carte correspondant aux données décrites dans le fichier XML.
+**Main Scenario**:
+1. The delivery planner clicks on the "Load City Map" button.
+2. The system opens a file dialog.
+3. The delivery planner selects a city map XML file.
+4. The system loads the selected XML file.
+5. The system displays the map based on the data from the XML file.
 
-### 2. Charger un fichier de demandes de livraison
+### 2. Load Delivery Request File
 
-**Description**: Charger dans l'application un fichier XML de demandes de livraison choisi par le planificateur de livraisons.
+**Description**: Load a selected delivery request XML file into the application.
 
-**Acteurs**: Planificateur de livraisons, Système de fichiers
+**Actors**: Delivery Planner, File System
 
-**Préconditions**:
-- L'application est lancée avec succès et prête à recevoir les entrées du planificateur de livraisons.
-- Une carte de la ville a été chargée dans l'application.
+**Preconditions**:
+- The application is successfully launched and ready to receive input from the delivery planner.
+- A city map has been loaded into the application.
 
-**Postconditions**: Les lieux de livraison du fichier de demandes de livraison sélectionné sont affichés sur la carte de la ville.
+**Postconditions**: Delivery locations from the selected request file are displayed on the city map.
 
-**Scénario principal**:
-1. Le planificateur de livraisons clique sur le bouton “Charger des demandes de livraison”.
-2. Le système ouvre une fenêtre de sélection de fichier.
-3. Le planificateur de livraisons sélectionne un fichier XML de livraison.
-4. Le système charge le fichier XML choisi.
-5. Le système ajoute les demandes de livraison chargées aux demandes de livraison disponibles.
+**Main Scenario**:
+1. The delivery planner clicks on the "Load Delivery Requests" button.
+2. The system opens a file selection window.
+3. The delivery planner selects a delivery request XML file.
+4. The system loads the selected XML file.
+5. The system adds the loaded delivery requests to the available requests.
 
-### 3. Créer une demande de livraison
+### 3. Create a Delivery Request
 
-**Description**: Créer une demande de livraison depuis l'application en sélectionnant une intersection et une fenêtre temporelle.
+**Description**: Create a new delivery request by selecting an intersection and a time window.
 
-**Acteurs**: Planificateur de livraisons
+**Actors**: Delivery Planner
 
-**Préconditions**:
-- L'application est lancée avec succès et prête à recevoir les entrées du planificateur de livraisons.
-- Une carte de la ville a été chargée dans l'application.
-- Une demande de livraison a été assignée au coursier sélectionné.
-- Au moins une tournée a été calculée avec succès.
+**Preconditions**:
+- The application is successfully launched and ready for input.
+- A city map has been loaded into the application.
+- A delivery request has been assigned to the selected courier.
+- At least one route has been successfully calculated.
 
-**Postconditions**: Pour chaque tournée existante, une feuille de route est générée.
+**Postconditions**: A route sheet is generated for each existing route.
 
-**Scénario principal**:
-1. L'utilisateur clique sur le bouton “Créer une demande de livraison”.
-2. Le planificateur de livraisons sélectionne une fenêtre temporelle.
-3. Le planificateur de livraisons sélectionne une intersection sur la carte de la ville en cliquant dessus.
-4. Le planificateur de livraisons spécifie si c'est un entrepôt ou non.
-5. Le planificateur de livraisons clique sur le bouton “Valider la demande de livraison créée”.
-6. Le système ajoute la demande de livraison créée aux demandes de livraison disponibles.
-   
-## Architecture MVC et motifs de conception
+**Main Scenario**:
+1. The user clicks on the "Create Delivery Request" button.
+2. The delivery planner selects a time window.
+3. The planner selects an intersection on the city map.
+4. The planner specifies if it is a warehouse.
+5. The planner clicks "Validate the Created Delivery Request."
+6. The system adds the newly created request to the available delivery requests.
+
+## MVC Architecture and Design Patterns
 
 ### MVC
 
-L'approche Model-View-Controller (MVC) a été choisie pour garantir la maintenabilité, l'évolutivité et la flexibilité à long terme de l'application. Cette architecture permet de séparer l'application en trois préoccupations distinctes:
+The Model-View-Controller (MVC) approach was chosen to ensure the application's maintainability, scalability, and long-term flexibility. This architecture separates the application into three distinct concerns:
 
-1. **Modèle**: Gestion et manipulation des entités nécessaires.
-2. **Vue**: Interface utilisateur et présentation des données.
-3. **Contrôleur**: Ajustement du modèle à la vue.
+1. **Model**: Manages and manipulates the necessary entities.
+2. **View**: Handles the user interface and data presentation.
+3. **Controller**: Adjusts the model to the view.
 
-### Motifs de conception
+### Design Patterns
 
-- **Command**: Encapsule une requête en tant qu'objet, permettant aux utilisateurs de paramétrer les clients avec différentes requêtes, de mettre en file d'attente les requêtes, et de supporter les opérations annulables.
-- **State**: Permet de changer le contexte de l'application, naviguant entre différents modes autorisés.
-- **Observer**: Utilisé pour l'IHM avec une souris et pour montrer les composants sélectionnés, améliorant les performances lorsqu'il y a beaucoup d'objets.
+- **Command**: Encapsulates a request as an object, allowing users to configure clients with different requests, queue them, and support undoable operations.
+- **State**: Enables changing the context of the application by navigating between allowed modes.
+- **Observer**: Used for the UI to respond to mouse input and highlight selected components, improving performance when handling many objects.
 
-## Rapport de test
+## Testing Report
 
-Les tests sont effectués pour garantir le bon fonctionnement de l'application et prévenir toute régression.
+Tests are conducted to ensure the application's proper functionality and prevent regression.
 
-## Revue technique
+## Technical Review
 
-Une analyse technique approfondie a été réalisée pour vérifier l'efficacité et la performance de l'application.
+A thorough technical analysis has been performed to evaluate the efficiency and performance of the application.
 
-## Problèmes environnementaux et sociaux
+## Environmental and Social Considerations
 
-Les implications environnementales et sociales ont été examinées pour s'assurer que l'application contribue positivement à la société et minimise son impact environnemental.
+Environmental and social implications have been reviewed to ensure that the application positively contributes to society and minimizes environmental impact.
 
-## Revue personnelle et commentaires
+## Personal Review and Feedback
 
-Les membres de l'équipe ont partagé leurs retours personnels et leurs commentaires sur le projet, offrant des perspectives sur les défis rencontrés et les leçons apprises.
+Team members have shared their personal feedback and comments on the project, providing insights into the challenges encountered and lessons learned.
 
 ---
 
-Pour plus de détails, veuillez consulter la documentation complète disponible dans le dossier `documentation`.
+For further details, please refer to the full documentation available in the `documentation` folder.
