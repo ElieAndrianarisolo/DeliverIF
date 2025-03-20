@@ -10,7 +10,7 @@ Here are some key screenshots from the DeliverIF application, showcasing its cor
 
 - **Load Map**: Import and display a city map for route planning.
 
-![01_Load_Map](./documentation/images_app/01_Home.png)
+![01_Load_Map](./documentation/images_app/01_Load_Map.png)
 
 - **Load Delivery Request**: Upload and display delivery requests on the map.
 
