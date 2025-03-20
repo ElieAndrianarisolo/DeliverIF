@@ -4,6 +4,26 @@
 
 DeliverIF is a delivery management application designed to optimize delivery routes within a city. It allows the loading of city maps, delivery requests, creation and assignment of delivery requests to routes, optimization of routes, and generation of delivery itineraries for couriers.
 
+## Application Screenshots
+
+Here are some key screenshots from the DeliverIF application, showcasing its core functionalities:
+
+- **Load Map**: Import and display a city map for route planning.
+
+![01_Load_Map](./documentation/images_app/01_Home.png)
+
+- **Load Delivery Request**: Upload and display delivery requests on the map.
+
+![02_Load_Delivery_Request](./documentation/images_app/02_Load_Delivery_Request.png)
+
+- **Manage Couriers**: Easily manage couriers and assign them to routes.
+
+![03_Manage_Courier](./documentation/images_app/03_Manage_Courier.png)
+
+- **Compute Best Tour**: Optimize and calculate the best delivery route for couriers.
+
+![04_Compute_Best_Tour](./documentation/images_app/04_Compute_Best_Tour.png)
+
 ## Glossary
 
 ### Key Terms
